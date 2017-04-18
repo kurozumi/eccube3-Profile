@@ -1,0 +1,12 @@
+admin.customer.edit.index.initialize:
+    - [onAdminCustomerEditIndexInitialize, NORMAL]
+admin.customer.edit.index.complete:
+    - [onAdminCustomerEditIndexComplete, NORMAL]
+front.entry.index.initialize:
+    - [onFrontEntryIndexInitialize, NORMAL]
+front.entry.index.complete:
+    - [onFrontEntryIndexComplete, NORMAL]
+front.mypage.change.index.initialize:
+    - [onFrontMypageChangeIndexInitialize, NORMAL]
+front.mypage.change.index.complete:
+    - [onFrontMypageChangeIndexComplete, NORMAL]

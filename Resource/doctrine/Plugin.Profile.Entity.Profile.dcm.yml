@@ -1,0 +1,33 @@
+Plugin\Profile\Entity\Profile:
+    type: entity
+    table: plg_profile
+    repositoryClass: Plugin\Profile\Repository\ProfileRepository
+    id:
+        id:
+            type: integer
+            nullable: false
+            id: true
+            column: profile_id
+            generator:
+                strategy: AUTO
+            options:
+                unsigned: true
+    fields:
+        nickname:
+            type: string
+            nullable: true
+            length: 50
+        customer_id:
+            type: integer
+            nullable: false
+            unsigned: false
+    manyToOne:
+        Customer:
+            targetEntity: Eccube\Entity\Customer
+            joinColumn:
+                name: customer_id
+                referencedColumnName: customer_id
+                nullable: false
+                options:
+                  unsigned: true
+    lifecycleCallbacks: {  }

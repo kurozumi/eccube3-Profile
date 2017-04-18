@@ -1,0 +1,8 @@
+name: Profile
+code: Profile
+version: 1.0.0
+event: ProfileEvent
+service:
+    - ProfileServiceProvider
+orm.path:
+    - /Resource/doctrine
