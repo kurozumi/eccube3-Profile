@@ -21,7 +21,7 @@ Plugin\Profile\Entity\Profile:
             type: integer
             nullable: false
             unsigned: false
-    manyToOne:
+    oneToOne:
         Customer:
             targetEntity: Eccube\Entity\Customer
             joinColumn:
