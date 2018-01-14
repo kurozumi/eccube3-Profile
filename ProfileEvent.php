@@ -71,10 +71,9 @@ class ProfileEvent
     public function indexInitialize(EventArgs $event)
     {
         $Customer = $event->getArgument('Customer');
-        $id = $Customer->getId();
 
         // DBからデータ取得
-        $Profile = $this->app['eccube.plugin.profile.repository.profile']->findOneBy(array('customer_id' => $Customer->getId()));
+        $Profile = $this->app['eccube.plugin.profile.repository.profile']->findOneBy(array('Customer' => $Customer));
 
         // データがなれけばエンティティインスタンス生成
         if (!$Profile) {
@@ -100,10 +99,9 @@ class ProfileEvent
     public function indexComplete(EventArgs $event)
     {
         $Customer = $event->getArgument('Customer');
-        $id = $Customer->getId();
 
         // DBからデータ取得
-        $Profile = $this->app['eccube.plugin.profile.repository.profile']->findOneBy(array("customer_id" => $id));
+        $Profile = $this->app['eccube.plugin.profile.repository.profile']->findOneBy(array("Customer" => $Customer));
 
         // データがなれけばエンティティインスタンス生成
         if (!$Profile) {
